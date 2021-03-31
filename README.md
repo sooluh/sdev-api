@@ -1,6 +1,6 @@
 # Pendahuluan
 
-**SDev API** adalah layanan web restful serbaguna yang bisa digunakan oleh siapapun dan pada platform apapun. [Syarat dan Ketentuan](https://sdev.web.id/p/terms-of-service) berlaku.
+**SDev API** adalah layanan web restful serbaguna yang bisa digunakan oleh siapapun dan pada platform apapun. [Syarat dan Ketentuan](https://sdev.web.id/terms) berlaku.
 
 {% hint style="info" %}
 Untuk perubahan terbaru, silahkan lihat pada halaman [Catatan Perubahan](https://docs.sdev.web.id/changelogs).
