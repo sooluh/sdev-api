@@ -146,15 +146,6 @@ Request request = new Request.Builder()
 Response response = client.newCall(request).execute();
 ```
 {% endtab %}
-
-{% tab title="C\#" %}
-```text
-var client = new RestClient("https://api.sdev.web.id/gameid/?game=1&id=2727579916");
-var request = new RestRequest(Method.GET);
-request.AddHeader("authorization", "Bearer <APIKEY>");
-IRestResponse response = client.Execute(request);
-```
-{% endtab %}
 {% endtabs %}
 
 ## Response
