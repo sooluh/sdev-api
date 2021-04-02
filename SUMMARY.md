@@ -6,6 +6,7 @@
 
 * [Catatan Perubahan](api/changelogs.md)
 * [Usang](api/deprecated.md)
+* [Contoh Request](api/request.md)
 * [Endpoint](api/endpoint.md)
 
 ## Tautan <a id="links"></a>
