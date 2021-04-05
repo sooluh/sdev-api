@@ -492,3 +492,175 @@ Domain yang harus dicari subdomain nya.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://api.sdev.web.id" path="/wikipedia" %}
+{% api-method-summary %}
+Wikipedia
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mencari dan mendapatkan informasi lengkap berdasarkan kata kunci dari situs wikipedia.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="keyword" type="string" required=true %}
+Kata kunci yang harus dicari.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/sslchecker" %}
+{% api-method-summary %}
+Cek Validasi SSL
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mengecek detail validasi SSL berdasarkan nama domain atau _hostname_.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="domain" type="string" required=true %}
+Domain yang harus dicek detail SSL nya.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/linkpreview" %}
+{% api-method-summary %}
+Pratinjau Tautan
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mendapatkan detail umum dari sebuah tautan.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="url" type="string" required=true %}
+Tautan yang harus didapatkan detail nya.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/jadwalsholat" %}
+{% api-method-summary %}
+Jadwal Sholat
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mendapatkan jadwal ibadah umat muslim berdasarkan kota, tahun serta bulan.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="city" type="string" required=true %}
+Nama kota.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="year" type="string" required=true %}
+Tahun.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="month" type="string" required=true %}
+Bulan.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% hint style="info" %}
+Nama kota bisa kamu lihat pada halaman [Didukung](https://docs.sdev.web.id/api/supported#cities).
+{% endhint %}
+
