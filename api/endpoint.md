@@ -40,7 +40,7 @@ Jumlah hasil bahasa yang akan dikembalikan.
 Tanggapan yang akan dikembalikan jika permintaan sukses.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
     "status": 200,
     "data": {
@@ -70,7 +70,7 @@ Tanggapan yang akan dikembalikan jika permintaan sukses.
 Tanggapan yang akan dikembalikan jika data yang harus dikirimkan tidak lengkap.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
     "status": 400,
     "messages": "Incoming request body does not contain a valid data.",
@@ -84,7 +84,7 @@ Tanggapan yang akan dikembalikan jika data yang harus dikirimkan tidak lengkap.
 Tanggapan yang akan dikembalikan jika APIKEY tidak valid.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "status": 401,
   "messages": "Unknown API Key. Please check your API key and try again.",
@@ -98,7 +98,7 @@ Tanggapan yang akan dikembalikan jika APIKEY tidak valid.
 Tanggapan yang akan dikembalikan jika APIKEY yang digunakan sedang ditangguhkan.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "status": 403,
   "messages": "Your account has been temporarily suspended.",
@@ -112,7 +112,7 @@ Tanggapan yang akan dikembalikan jika APIKEY yang digunakan sedang ditangguhkan.
 Tanggapan yang akan dikembalikan jika APIKEY yang digunakan sudah melebihi batas penggunaan harian.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "status": 429,
   "messages": "Request for your API Key has exceeded the usage limit.",
@@ -126,7 +126,7 @@ Tanggapan yang akan dikembalikan jika APIKEY yang digunakan sudah melebihi batas
 Tanggapan yang akan dikembalikan jika terjadi kesalahan pada server kami. Harap segera hubungi administrator jika Anda mendapatkan tanggapan seperti berikut.
 {% endapi-method-response-example-description %}
 
-```
+```javascript
 {
   "status": 500,
   "messages": "SDev API has encountered an unexpected error and cannot fulfill your request.",

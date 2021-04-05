@@ -6,13 +6,13 @@
 Untuk perubahan terbaru, silahkan lihat pada halaman [Catatan Perubahan](https://docs.sdev.web.id/changelogs).
 {% endhint %}
 
-## Kunci API
+## Kunci API <a id="apikey"></a>
 
 {% hint style="danger" %}
 Saat ini SDev API belum membuka pendaftaran kunci API.
 {% endhint %}
 
-## Umpan Balik
+## Umpan Balik <a id="feedback"></a>
 
 Untuk pertanyaan, kesalahan ketik pada dokumentasi atau permintaan untuk penambahan _endpoint_ silahkan buat [Github _issues_](https://github.com/sooluh/sdev-api/issues) baru.
 
