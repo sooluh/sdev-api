@@ -4,7 +4,7 @@ description: Nilai-nilai yang saat ini didukung dari parameter yang dikirim.
 
 # Didukung
 
-## Bahasa
+## Bahasa <a id="language"></a>
 
 | Nilai | Nama Bahasa |
 | :--- | :--- |
@@ -114,7 +114,7 @@ description: Nilai-nilai yang saat ini didukung dari parameter yang dikirim.
 | yo | Yoruba |
 | zu | Zulu |
 
-## Kode Game
+## Kode Game <a id="game"></a>
 
 | Nilai | Nama Game |
 | :--- | :--- |
