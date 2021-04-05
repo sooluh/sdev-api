@@ -1,5 +1,7 @@
 ---
-description: Nilai-nilai yang saat ini didukung dari parameter yang dikirim.
+description: >-
+  Nilai-nilai yang saat ini didukung dari parameter-parameter yang harus
+  dikirimkan.
 ---
 
 # Didukung
