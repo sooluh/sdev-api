@@ -25,11 +25,11 @@ Metode otentikasi yang kami gunakan adalah Bearer.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="text" type="string" required=true %}
-Teks yang akan di deteksi bahasanya.
+Teks yang harus di deteksi bahasanya.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="result" type="integer" required=false %}
-Jumlah hasil bahasa yang akan dikembalikan.
+Jumlah hasil bahasa yang harus dikembalikan.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -159,16 +159,16 @@ Metode otentikasi yang kami gunakan adalah Bearer.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="text" type="string" required=true %}
-Teks yang akan di terjemahkan.
+Teks yang harus di terjemahkan.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="from" type="string" required=false %}
-Kode bahasa dari teks yang dikirimkan.  
+Kode bahasa dari teks yang harus diterjemahkan.  
 Gunakan **auto** jika ingin menggunakan deteksi bahasa.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="to" type="string" required=true %}
-Kode bahasa terjemahan yang di inginkan.
+Kode bahasa yang akan menjadi terjemahannya.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -212,7 +212,7 @@ Metode otentikasi yang kami gunakan adalah Bearer.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="keyword" type="string" required=true %}
-Kata kunci drama korea yang ingin dicari.
+Kata kunci drama korea yang harus dicari.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -252,11 +252,11 @@ Metode otentikasi yang kami gunakan adalah Bearer.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="game" type="integer" required=true %}
-Kode game.
+Kode game yang harus dicek.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-ID game dari akun yang ingin dicek.  
+ID game dari akun yang harus dicek.  
 Tidak dibutuhkan untuk game **Dragon Nest**.
 {% endapi-method-parameter %}
 
@@ -332,7 +332,7 @@ Pencarian Kodepos
 {% endapi-method-summary %}
 
 {% api-method-description %}
-_Endpoint_ ini digunakan untuk mencari kode pos \(Indonesia\) berdasarkan kata kunci, nama provinsi, nama kota, nama kabupaten, nama kecamatan, nama kelurahan, nama desa, maupun nama daerah.
+_Endpoint_ ini digunakan untuk mencari kode pos \(Indonesia\) berdasarkan nama daerah, nama kota, maupun nama kelurahan.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -347,7 +347,133 @@ Metode otentikasi yang kami gunakan adalah Bearer.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="keyword" type="string" required=true %}
-Kata kunci kode pos yang ingin dicari.
+Kata kunci kode pos yang harus dicari.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/provider" %}
+{% api-method-summary %}
+Deteksi Provider
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mendeteksi provider kartu perdana berdasarkan nomor telepon.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="number" type="number" required=true %}
+**628xxxxxxxxxx**  
+  
+Nomor telepon yang harus di deteksi nama provider nya.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/covidarea" %}
+{% api-method-summary %}
+Cek Area COVID-19
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mengecek zona terdampak COVID-19 berdasarkan latitude dan longitude.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="latitude" type="string" required=true %}
+Koordinat garis lintang.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="longitude" type="string" required=true %}
+Koordinat garis bujur.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/subfinder" %}
+{% api-method-summary %}
+Pencarian Subdomain
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mencari subdomain yang tersedia dari domain utama.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="domain" type="string" required=true %}
+Domain yang harus dicari subdomain nya.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
