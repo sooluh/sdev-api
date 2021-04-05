@@ -17,9 +17,7 @@ _Endpoint_ ini digunakan untuk mendeteksi bahasa dari suatu teks disertai dengan
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="authorization" type="string" required=true %}
-**Bearer &lt;APIKEY&gt;**  
-  
-Metode otentikasi yang kami gunakan adalah Bearer.
+**Bearer &lt;APIKEY&gt;**Metode otentikasi yang kami gunakan adalah Bearer.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -144,16 +142,14 @@ Terjemahan
 {% endapi-method-summary %}
 
 {% api-method-description %}
-_Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lainnya. Lihat [disini](https://docs.sdev.web.id/api/supported#language) untuk kode bahasa.
+_Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lainnya.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="authorization" type="string" required=true %}
-**Bearer &lt;APIKEY&gt;**  
-  
-Metode otentikasi yang kami gunakan adalah Bearer.
+**Bearer &lt;APIKEY&gt;**Metode otentikasi yang kami gunakan adalah Bearer.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -179,11 +175,15 @@ Kode bahasa terjemahan yang di inginkan.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% hint style="info" %}
+Kode bahasa bisa kamu lihat pada halaman [Didukung](https://docs.sdev.web.id/api/supported#language).
+{% endhint %}
 

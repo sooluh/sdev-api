@@ -11,8 +11,6 @@
 
 ## Tautan <a id="links"></a>
 
----
-
 * [Masuk](https://sdev.web.id/auth/login)
 * [Daftar](https://sdev.web.id/auth/register)
 
