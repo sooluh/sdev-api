@@ -284,14 +284,6 @@ Dibutuhkan untuk game **Bleach Mobile 3D**, **Era of Celestials**, dan **Dragon 
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Kode Server - Ragnarok Mobile
-
-| Nilai | Nama Server |
-| :--- | :--- |
-| 1 | Eternal Love |
-| 2 | Midnight Party |
-| 3 | Memory of Faith |
-
 {% api-method method="get" host="https://api.sdev.web.id" path="/onecak" %}
 {% api-method-summary %}
 Onecak Shuffle

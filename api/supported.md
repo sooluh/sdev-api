@@ -133,3 +133,11 @@ description: >-
 | 11 | Era of Celestials |
 | 12 | Dragon Nest |
 
+### Kode Server Ragnarok Mobile
+
+| Kode | Nama Server |
+| :--- | :--- |
+| 1 | Eternal Love |
+| 2 | Midnight Party |
+| 3 | Memory of Faith |
+
