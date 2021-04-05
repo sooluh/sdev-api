@@ -17,13 +17,15 @@ _Endpoint_ ini digunakan untuk mendeteksi bahasa dari suatu teks disertai dengan
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="authorization" type="string" required=true %}
-**Bearer &lt;APIKEY&gt;**Metode otentikasi yang kami gunakan adalah Bearer.
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="text" type="string" required=true %}
-Teks yang akan dideteksi bahasanya.
+Teks yang akan di deteksi bahasanya.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="result" type="integer" required=false %}
@@ -149,7 +151,9 @@ _Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lai
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="authorization" type="string" required=true %}
-**Bearer &lt;APIKEY&gt;**Metode otentikasi yang kami gunakan adalah Bearer.
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -186,4 +190,179 @@ Kode bahasa terjemahan yang di inginkan.
 {% hint style="info" %}
 Kode bahasa bisa kamu lihat pada halaman [Didukung](https://docs.sdev.web.id/api/supported#language).
 {% endhint %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/drakor" %}
+{% api-method-summary %}
+Pencarian Drama Korea
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mencari drama korea dan mendapatkan detail lengkap dari drama korea tersebut.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="keyword" type="string" required=true %}
+Kata kunci drama korea yang ingin dicari.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sddev.web.id" path="/gameid" %}
+{% api-method-summary %}
+Cek ID Game
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mengecek nickname dan ketersediaan akun dari beberapa game online.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="game" type="integer" required=true %}
+Kode game.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=true %}
+ID game dari akun yang ingin dicek.  
+Tidak dibutuhkan untuk game **Dragon Nest**.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="server" type="string" required=false %}
+Dibutuhkan untuk game **Mobile Legends: Bang Bang**, **Ragnarok Mobile**, **Bleach Mobile 3D**, **Era of Celestials**, dan **Dragon Nest**.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="role" type="string" required=false %}
+Dibutuhkan untuk game **Bleach Mobile 3D**, **Era of Celestials**, dan **Dragon Nest**.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+### Kode Server - Ragnarok Mobile
+
+| Nilai | Nama Server |
+| :--- | :--- |
+| 1 | Eternal Love |
+| 2 | Midnight Party |
+| 3 | Memory of Faith |
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/onecak" %}
+{% api-method-summary %}
+Onecak Shuffle
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mendapatkan meme secara acak dari situs 1cak.com
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/kodepos" %}
+{% api-method-summary %}
+Pencarian Kodepos
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk mencari kode pos \(Indonesia\) berdasarkan kata kunci, nama provinsi, nama kota, nama kabupaten, nama kecamatan, nama kelurahan, nama desa, maupun nama daerah.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="keyword" type="string" required=true %}
+Kata kunci kode pos yang ingin dicari.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
