@@ -10,7 +10,7 @@ Deteksi Bahasa
 {% endapi-method-summary %}
 
 {% api-method-description %}
-_Endpoint_ ini digunakan untuk mendeteksi bahasa dari suatu teks disertai dengan kepercayaannya.
+_Endpoint_ ini digunakan untuk mendeteksi bahasa dari suatu teks disertai dengan kepercayaan.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -132,6 +132,55 @@ Tanggapan yang akan dikembalikan jika terjadi kesalahan pada server kami. Harap 
   "messages": "SDev API has encountered an unexpected error and cannot fulfill your request.",
   "data": null
 }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.sdev.web.id" path="/language/translate" %}
+{% api-method-summary %}
+Terjemahan
+{% endapi-method-summary %}
+
+{% api-method-description %}
+_Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lainnya. Lihat disini untuk kode bahasa.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="authorization" type="string" required=true %}
+**Bearer &lt;APIKEY&gt;**  
+  
+Metode otentikasi yang kami gunakan adalah Bearer.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="text" type="string" required=true %}
+Teks yang akan di terjemahkan.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="from" type="string" required=false %}
+Kode bahasa dari teks yang dikirimkan.  
+Gunakan **auto** jika ingin menggunakan deteksi bahasa.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="to" type="string" required=true %}
+Kode bahasa terjemahan yang di inginkan.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
