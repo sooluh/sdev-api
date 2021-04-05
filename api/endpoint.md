@@ -144,7 +144,7 @@ Terjemahan
 {% endapi-method-summary %}
 
 {% api-method-description %}
-_Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lainnya. Lihat disini untuk kode bahasa.
+_Endpoint_ ini digunakan untuk menerjemahkan teks dari satu bahasa ke bahasa lainnya. Lihat [disini](https://docs.sdev.web.id/api/supported#language) untuk kode bahasa.
 {% endapi-method-description %}
 
 {% api-method-spec %}
