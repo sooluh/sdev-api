@@ -1,18 +1,27 @@
-# Pendahuluan
+---
+description: Welcome to Shafima API!
+---
 
-**SDev API** adalah layanan web restful serbaguna yang bisa digunakan oleh siapapun dan pada platform apapun. [Syarat dan Ketentuan](https://sdev.web.id/terms) berlaku.
+# Introduction
+
+**Shafima API** is a versatile restful web service with various endpoints available which can be used by anyone and on any platform.
 
 {% hint style="info" %}
-Untuk perubahan terbaru, silahkan lihat pada halaman [Catatan Perubahan](https://docs.sdev.web.id/changelogs).
+[Terms and Conditions](https://sdev.web.id/terms) apply!
 {% endhint %}
 
-## Kunci API <a id="apikey"></a>
+## Getting Started <a id="getting-started"></a>
 
-{% hint style="danger" %}
-Saat ini SDev API belum membuka pendaftaran kunci API.
-{% endhint %}
+To get started with Shafima API, follow the steps given below.
 
-## Umpan Balik <a id="feedback"></a>
+1. Create an account in [Member Area](https://sdev.web.id/app).
+2. Complete all the necessary steps.
+3. Verify that you are valid.
+4. Wait for the admin to verify your account.
+5. Go to [Integration](https://sdev.web.id/app/integration) menu to get API Key.
+6. Have fun!
 
-Untuk pertanyaan, kesalahan ketik pada dokumentasi atau permintaan untuk penambahan _endpoint_ silahkan buat [Github _issues_](https://github.com/sooluh/sdev-api/issues) baru.
+## Feedback <a id="feedback"></a>
+
+For questions, typos in the documentation or requests for additional endpoints please create a new [GitHub Issue](https://github.com/sooluh/sdev-api/issues).
 

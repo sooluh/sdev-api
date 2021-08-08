@@ -1,6 +1,6 @@
 ---
-description: Pemberitahuan dan daftar endpoint yang telah usang atau sudah tidak aktif.
+description: Outdated or inactive notifications and endpoint lists.
 ---
 
-# Usang
+# Deprecated
 
