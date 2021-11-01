@@ -2,36 +2,22 @@
 description: A list of all currently available and usable endpoints or features.
 ---
 
-# Endpoint
+# 🔥 Endpoint
 
 ## Game
 
 Game-related endpoint category.
 
-{% api-method method="get" host="https://api.sdev.web.id" path="/game/list" %}
-{% api-method-summary %}
-Game List
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.sdev.web.id" path="/game/list" method="get" summary="Game List" %}
+{% swagger-description %}
 Get a list of available games and servers along with their active status.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;API KEY&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter name="Authorization" type="string" required="true" in="header" %}
+Bearer <API KEY>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The response you will receive if the request is successful.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="The response you will receive if the request is successful." %}
 ```javascript
 {
   "code": 200,
@@ -60,13 +46,9 @@ The response you will receive if the request is successful.
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-A response will be returned if the data to be submitted is incomplete.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="A response will be returned if the data to be submitted is incomplete." %}
 ```javascript
 {
   "code": 400,
@@ -74,13 +56,9 @@ A response will be returned if the data to be submitted is incomplete.
   "messages": "Incoming request body doesn't contain a valid data."
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-The response you will get if the API KEY you are using is not/not yet valid.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="The response you will get if the API KEY you are using is not/not yet valid." %}
 ```javascript
 {
   "code": 401,
@@ -88,13 +66,9 @@ The response you will get if the API KEY you are using is not/not yet valid.
   "messages": "Unknown API key. Please check your API key and try again."
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=403 %}
-{% api-method-response-example-description %}
-The following is response you will receive if the API KEY you are using is being suspended.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="403" description="The following is response you will receive if the API KEY you are using is being suspended." %}
 ```javascript
 {
   "code": 403,
@@ -102,13 +76,9 @@ The following is response you will receive if the API KEY you are using is being
   "messages": "Your account has been temporarily suspended."
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=429 %}
-{% api-method-response-example-description %}
-The response that will be returned if the API KEY used has exceeded the daily usage limit.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="429" description="The response that will be returned if the API KEY used has exceeded the daily usage limit." %}
 ```javascript
 {
   "code": 429,
@@ -116,13 +86,9 @@ The response that will be returned if the API KEY used has exceeded the daily us
   "messages": "Request for your API key has exceeded the usage limit."
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-The response you will be receive if something goes wrong on the client or server side. Please contact the administrator immediately if you get a response like the following.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="500" description="The response you will be receive if something goes wrong on the client or server side. Please contact the administrator immediately if you get a response like the following." %}
 ```javascript
 {
   "code": 500,
@@ -131,53 +97,35 @@ The response you will be receive if something goes wrong on the client or server
   "errors": "..."
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api.sdev.web.id" path="/game/id" %}
-{% api-method-summary %}
-Game ID Checker
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.sdev.web.id" path="/game/id" method="get" summary="Game ID Checker" %}
+{% swagger-description %}
 Retrieve nickname and availability of online game accounts based on user id.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;APIKEY&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter name="Authorization" type="string" required="true" in="header" %}
+Bearer <APIKEY>
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="game" type="number" required=true %}
+{% swagger-parameter name="game" type="number" required="true" in="query" %}
 Game ID from our list to check
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="id" type="string" required=true %}
+{% swagger-parameter name="id" type="string" required="true" in="query" %}
 User ID of account that must be checked
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="server" type="string" required=false %}
+{% swagger-parameter name="server" type="string" required="false" in="query" %}
 Game server code/ID from our list
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="role" type="string" required=false %}
-Game account role \(only for specific game\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter name="role" type="string" required="false" in="query" %}
+Game account role (only for specific game)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The response you will receive if the request is successful.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="The response you will receive if the request is successful." %}
 ```javascript
 {
   "code": 200,
@@ -189,8 +137,5 @@ The response you will receive if the request is successful.
   }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}
