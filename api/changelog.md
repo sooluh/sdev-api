@@ -4,5 +4,6 @@ description: >-
   additions.
 ---
 
-# Changelog
+# 🆕 Changelog
 
+This page is blank.

@@ -2,5 +2,6 @@
 description: Outdated or inactive notifications and endpoint lists.
 ---
 
-# Deprecated
+# 💔 Deprecated
 
+This page is blank.
